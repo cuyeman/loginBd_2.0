@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-define("URLBASE","http://localhost:8081/login/");
+define("URLBASE","http://localhost:80/ProyectoLogin/");
 /*
  * Parametros DB
  * **/

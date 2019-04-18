@@ -49,15 +49,15 @@ class Usuario{
             return false;
         }
         
-        $PDOst=$dblink->prepare('select id,nombre
+        $PDOst=$dblink->prepare('select idusuario,nombre
                                  from usuario
                                  where nomusu=? and clave=?');
         
         $PDOst->execute(array($this->nomusuario,$this->clave));
         
-        $row=$PDOst->fetch(PDO::FETCH_OBJ);
+        //$row=$PDOst->fetch(PDO::FETCH_OBJ);
         
-        if (isset($row)){
+        if ($row=$PDOst->fetch(PDO::FETCH_OBJ)){
             $this->nombre=$row->nombre;
             return true;
         }
